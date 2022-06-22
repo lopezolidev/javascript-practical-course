@@ -4,10 +4,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./figures.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,800;1,300;1,500;1,700&display=swap" rel="stylesheet">  
     <title>Geometrical Figures | Javascript Practical Course</title>
 </head>
 <body>
-    <h1>Geometrical figures</h1>
+    <header class="header">    
+        <h1>Geometry Calculator</h1>
+    </header>
+    <main class="wrapper">
+    <section class="square-section section">
+        <h2>Calculate area and perimeter of a Square</h2>
+        <img src="./images/icons8-square-96.png" alt="square" class="square-img img">
+        <form>
+            <div class="input">
+            <label for="inputSquare">
+                Insert Square side
+            </label>
+            <input id="inputSquare" type="number" />
+            </div>
+            <div class="buttons">
+                <button type="button" onclick="calculateSquarePerimeter()">
+                    Square perimeter
+                </button>
+                <button type="button" onclick="calculateSquareArea()">
+                    Square area
+                </button>
+            </div>
+        </form>
+    </section>
+    <section class="triangle-section  section">
+        <h2>Calculate area and perimeter of a Triangle</h2>
+        <img src="./images/icons8-triangle-96.png" alt="triangle" class="triangle-img img">
+        <form>
+            <div class="input input-triangle">
+                <label for="inputTriangle">
+                    Insert Triangle sides
+                </label>
+                <div class="triangle-collection">
+                    <input id="inputTriangle" type="number" placeholder="Side 1" />
+                    <input id="inputTriangle2" type="number" placeholder="Side 2" />
+                    <input id="inputTriangle3" type="number" placeholder="Base" />
+                    <input id="inputTriangle4" type="number" placeholder="Height" />
+                </div>
+            </div>
+            <div class="buttons triangle-buttons">
+                <button type="button" onclick="calculateTrianglePerimeter()">
+                    Triangle perimeter
+                </button>
+                
+                <button type="button" onclick="calculateTriangleArea()">
+                    Triangle area
+                </button>
+            </div>
+        </form>
+    </section>
+    <section class="circle-section  section">
+        <h2>Calculate area and perimeter of a Circle</h2>
+        <img src="./images/icons8-circle-100.png" alt="circle" class="circle-img img">
+        <form>
+            <div class="input input-circle">
+                <label for="inputCircle">
+                    Insert Circle radius
+                </label>
+                <input id="inputCircle" type="number" />
+            </div>
+            <div class="buttons circle-button">     
+                <button type="button" onclick="calculateCirclePerimeter()">
+                    Circle perimeter
+                </button>
+                <button type="button" onclick="calculateCircleArea()">
+                    Circle area
+                </button>
+            </div>
+        </form>
+    </section>
+    </main>
     <script src="./figures.js"></script>
 </body>
 </html>

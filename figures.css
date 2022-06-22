@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-family:'Montserrat', sans-serif;
+    font-size: 62.5%;
+}
+:root {
+    --Main-color:  #7BB6E8; 
+    --Square-color:  #33ff57;
+    --Triangle-color: #4d23e7;
+    --Circle-color:  #e74d23;
+    --Square-opposite-color: #4d23e7 ;
+}
+
+/* Setting the general display - Mobile first approach */
+
+.header {
+    height: 8vh;
+    background-color: var(--Main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8rem;
+}
+.header h1 {
+    font-size: large;
+    color: white;
+
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+}
+.section {
+    height: 60vh;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.section h2 {
+    padding-top: 4rem;
+    font-weight: 800;
+    font-size: x-large;
+    color: white;
+    font-style: normal;
+}
+.square-section .square-img {
+    width: auto;
+}
+.section form {
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2rem;
+}
+.section .input {
+    display: flex;
+}
+
+.square-section .input label {
+    width: 25%;
+    color: white;
+    font-size: 1.4rem;
+
+}
+.square-section .input input {
+    width: 75%;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
+    font-size: medium;
+}
+.section .buttons {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.square-section .buttons button {
+    background-color:  var(--Square-opposite-color);
+}
+
+.section .buttons button {
+     border: none;
+     width: 12rem;
+     height: 6rem;
+     border-radius: 2.8rem;
+     cursor: pointer;
+     /* background-color:  var(--Square-opposite-color) ; */
+     color: white;
+     font-weight: 700;
+}
+
+.square-section {
+    background-color: var(--Square-color);
+    border-radius: 5%;
+}
+
+/* Styles for triangle and circle */
+
+.triangle-section {
+    background-color: var(--Triangle-color);
+}
+
+.triangle-section .triangle-img {
+    width: auto;
+}
+.triangle-section .input-triangle {
+    display: flex;
+    flex-wrap: wrap;
+}
+.triangle-section .input-triangle label {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 1.4rem;
+    margin-bottom: 1.6rem;
+}
+.triangle-collection {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.2rem;
+}
+.triangle-collection input {
+    width: 50%;
+    padding: 0.8rem;
+    color: white;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 1px white;
+}
+
+.triangle-section .triangle-buttons button {
+    background-color: var(--Circle-color);
+}
+
+
+.circle-section {
+    background-color: var(--Circle-color);
+}
+
+.circle-section .circle-img {
+    width: auto;
+}
+
+.circle-section .input-circle {
+    display: flex;
+}
+.circle-section .input-circle label {
+    width: 25%;
+    color: white;
+    font-size: 1.4rem;
+}
+.circle-section .input-circle input {
+    width: 75%;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
+    font-size: medium;
+}
+.circle-section .circle-button button {
+    background-color: var(--Square-color);
+}
