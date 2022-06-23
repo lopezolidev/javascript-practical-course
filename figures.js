@@ -103,7 +103,6 @@ function calculateTrianglePerimeter() {
     
     const perimeter = trianglePerimeter(Number(side1.value), Number(side2.value), Number(base.value));
     alert (perimeter);
-    
     const area = triangleArea(Number(base.value), Number(height.value));
     alert (area);
 }
