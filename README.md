@@ -7,7 +7,13 @@ A repository for the Platzi's javascript practical course
 -   3° Construct the functions
 -   4° Integrate the code into the HTML
 
-## 1st workshop: Geometrical figures 
+## 2nd workshop: Percentages 
+-   1° Define formulas
+-   2° Implement formulas in JavaScript
+-   3° Construct the functions
+-   4° Integrate the code into the HTML
+
+## 3rd workshop: Basic Statistics 
 -   1° Define formulas
 -   2° Implement formulas in JavaScript
 -   3° Construct the functions
