@@ -69,6 +69,7 @@ function mode(newList) {
             }
         }
     );
+    // "Object.entries" es una función que transforma objetos en arrays 
     const listArray = Object.entries(listObject).sort(
         function (elementA, elementB) {
             return elementA[1] - elementB[1];
