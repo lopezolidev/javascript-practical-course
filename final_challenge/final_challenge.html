@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final challenge</title>
+</head>
+<body>
+    <style>
+        html {
+            background-color: black;
+            color: white;
+        }
+    </style>
+
+    <h1>Welcome!</h1>
+    
+    <label for="input-salary">Insert your salary</label>
+    <input type="number" id="inputSalary">
+    <br>
+    <label for="input-raise">Insert your raise</label>
+    <input type="number" id="inputRaise">
+    
+    <button type="button" onclick="calculateRaise()">Show raise</button>
+    <p id="result-simple"></p>
+    <p id="result-percent"></p>
+    
+    <script src="./raise.js"></script>
+</body>
+</html>
