@@ -26,6 +26,32 @@
     <p id="result-simple"></p>
     <p id="result-percent"></p>
     
+    <!-- this line gaps will be deleted when styling with css -->
+    <br>
+    <br>
+    <br>
+
+    <form action="#">
+        <h2>Net Present Value calculator</h2>
+        <label for="inputInvestment">Insert your initial investment</label>
+        <input type="number" id="inputInvestment">
+         
+        <!-- this line gap also has to be deleted -->
+        <br>
+        <label for="inputPeriod">Insert how many periods</label>
+        <input type="number" id="inputPeriod">
+
+        <!-- another line gap to be deleted -->
+        <br>
+        <label for="inputRate">Insert Interest Rate</label>
+        <input type="number" id="inputRate">
+
+        <!-- line gap -->
+        <br>
+        <button type="button" onclick="netPresentValue()">Calculate NPV</button>
+        <p id="result-npv"></p>
+    </form>
     <script src="./raise.js"></script>
+    <script src="./feasibility.js"></script>
 </body>
 </html>
