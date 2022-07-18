@@ -5,22 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final challenge</title>
+    <link rel="stylesheet" href="./final_challenge.css">
 </head>
 <body>
-    <style>
-        html {
-            background-color: black;
-            color: white;
-        }
-    </style>
-
     <h1>Welcome!</h1>
     
     <label for="input-salary">Insert your salary</label>
     <input type="number" id="inputSalary">
     <br>
-    <label for="input-raise">Insert your raise</label>
-    <input type="number" id="inputRaise">
+    <label for="inputMultiplier">Insert your raise multiplier</label>
+    <input type="number" id="inputMultiplier">
     
     <button type="button" onclick="calculateRaise()">Show raise</button>
     <p id="result-simple"></p>
@@ -49,8 +43,21 @@
         <!-- line gap -->
         <br>
         <button type="button" onclick="netPresentValue()">Calculate NPV</button>
-        <p id="result-npv"></p>
+        <p id="resultnpv"></p>
     </form>
+
+    <!-- <form action="#">
+        <h2>Internal Rate of Return calculator</h2>
+        <label for="inputInvestment">Insert your initial investment</label>
+        <input type="number" id="inputInvestment">
+
+        <label for="inputPeriod">Insert how many periods</label>
+        <input type="number" id="inputPeriod">
+
+        <button type="button" onclick="irr()">Calculate IRR</button>
+        <p id="resultirr"></p>
+
+    </form> -->
     <script src="./raise.js"></script>
     <script src="./feasibility.js"></script>
 </body>

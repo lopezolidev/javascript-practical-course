@@ -6,15 +6,15 @@
 
 function calculateRaise() {    
     const salary = document.getElementById("inputSalary");
-    const raise = document.getElementById("inputRaise");
+    const multiplier = document.getElementById("inputMultiplier");
+    const numericalSalary = parseInt(salary.value);
 
-    const diff = raise.value - salary.value;
-    const raiseSimple = diff / salary.value;
-    const raisePercent = raiseSimple * 100;
+    const raiseSalary = salary.value*multiplier.value;
+    const raiseTotal = raiseSalary + numericalSalary;
     const resultSimple = document.getElementById("result-simple");
-    resultSimple.innerText = "Your raise simple is " + raiseSimple + " times";
+    resultSimple.innerText = "Your raise is " + raiseTotal;
 
-    const resultPercent = document.getElementById("result-percent");
-    resultPercent.innerText = "Your raise percent is " + raisePercent + "%";
+    // const resultPercent = document.getElementById("result-percent");
+    // resultPercent.innerText = "Your raise percent is " + raisePercent + "%";
     }
 
