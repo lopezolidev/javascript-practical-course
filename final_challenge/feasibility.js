@@ -1,32 +1,4 @@
-// const valores = [];
-
-// const investment = Number(prompt("insert initial investment"));
-// const periodos = Number(prompt("insert period"));
-// const tasa = Number(prompt("insert interest rate"));
-
-// for (var i = 0; i < periodos; i++) {
-//     const newValues = valores.push(Number(prompt("new value")));
-//     console.log(valores);
-// }
-
-// const newValues = [];
-
-// for (let j = 1; j < valores.length + 1; j++) {
-//    newValues.push(valores[j -1] / Math.pow(1 + tasa, j));
-//     console.log(newValues);
-// }
-
-// const total = newValues.reduce(function (initialV, finalV) {
-//     return initialV + finalV;
-// }, 0)
-
-// const npv = total - investment;
-
-// console.log(npv);
-
-// now with a function
-
-
+//Net Present Value function
 
 function netPresentValue () {
     const anyArray = [];
@@ -60,47 +32,27 @@ function netPresentValue () {
     }
 }
 
-function irr() {
-    const anyArray = [];
-    const investment = Number(prompt("insert investment"));
-    const periods = Number(prompt("insert periods"));
-    console.log(periods);
-
-    for (var i = 0; i < periods; i++) {
-        const newValues = anyArray.push(Number(prompt("new value")));
-        console.log(anyArray);
-    }
-    // const investment = document.getElementById("inputInvestment");
-    // const periods = document.getElementById("inputPeriod");
+// Sergio's algorithm for Internal Rate of Return function:
 
 
-    let j = 1;
-    let rate = 0.1;
-    let npv = 0;
-    do {
-        npv = parseInt(anyArray[j-1] / Math.pow(1 + rate, j));
-        rate += 0.1;
-        j += 1;
-        console.log(npv);
-    }
-    while (npv < investment.value) 
+function IRRCalc () {
+    let guest = 0.001;
+    const IRRvalues = [];
+    const financed = document.getElementById("inputFinanced");
+    const period = document.getElementById("inputCashFlows");
+
+    const numericalFinanced = parseInt(financed.value);
+    const numericalPeriod = parseInt(period.value);
+
     
-}
+    IRRvalues.push(-numericalFinanced);
 
-// Sergio's algorithm:
+    for (var i = 0; i < numericalPeriod; i++) {
+      var rental = parseInt(prompt("Insert rental"));
+      IRRvalues.push(rental);
+      console.log(IRRvalues);
+    }
 
-const IRRvalues = [];
-const financed = 200;
-const rental = 50;
-const period = 6;
-
-IRRvalues.push(-financed);
-
-for (var i = 0; i < period; i++) {
-    IRRvalues.push(rental);
-}
-console.log(IRRvalues);
-function IRRCalc (valueA, guest) {
     let inc = 0.00001;
     do {
         guest += inc;
@@ -109,11 +61,54 @@ function IRRCalc (valueA, guest) {
             NPV += IRRvalues[j] / Math.pow(1 + guest, j);
         }
     } while (NPV > 0)
-    return guest * 100;
+    const newGuest = parseInt(guest * 100);
+    const resultIRR = document.getElementById("resultirr");
+    resultIRR.innerText = newGuest + "% is your IRR."
 }
-const IRR = IRRCalc(IRRvalues, 0.001);
-console.log(IRR);
-
-IRRCalc(financed, IRRvalues);
 
 // Inspired by @dciso and @Zohaib in Stack Overflow
+
+
+// Interes rate calculator
+
+function InRaCalc() {
+    const capitalInicial = document.getElementById("inputInitialCapital");
+    const tasaInteres = document.getElementById("inputInteresRate");
+    const añosInteres = document.getElementById("inputTime");
+    const capitalResultado = document.getElementById("resultInRa");
+
+    const capitalInicialNumerico = parseInt(capitalInicial.value);
+    const tasaInteresNumerica = parseInt(tasaInteres.value);
+    const añosInteresNumerico = parseInt(añosInteres.value);
+
+    const capitalTotal = capitalInicialNumerico * Math.pow(1 + (tasaInteresNumerica/100), añosInteresNumerico);
+
+    //here I add the function Math.round and Number.EPSILON operator to round the decimal digits of the capitalTotal number to 2 digits
+    const capitalFinal = Math.round((capitalTotal + Number.EPSILON) * 100) / 100;
+
+    capitalResultado.innerText = "Tendrás " + capitalFinal + "$ de capital a los " + añosInteresNumerico + " años, con una tasa de interés de " + tasaInteresNumerica + "% y " + capitalInicialNumerico + " de capital inicial."   
+}
+
+// Debt amortization by annualities
+
+function AmorDebt() {
+    const capitalPrestado = document.getElementById("inputLoanCapital");
+    const tasaInteresAmr = document.getElementById("inputLoanRate");
+    const anniosPagoAmr = document.getElementById("inputYearsLoan");
+    const resultadoAmrDebt = document.getElementById("resultAmorDebt");
+
+    const capitalPrestadoNmr = parseInt(capitalPrestado.value);
+    const tasaInteresNmr = parseInt(tasaInteresAmr.value);
+    const anniosPagoNmr = parseInt(anniosPagoAmr.value);
+
+    const annualityNum = (capitalPrestadoNmr * (tasaInteresNmr/100) * Math.pow(1 + (tasaInteresNmr/100), anniosPagoNmr));
+
+
+    const annualityDen =  Math.pow(1 + (tasaInteresNmr/100), anniosPagoNmr) - 1;
+
+    const annuality = annualityNum / annualityDen;
+    
+    const annualityParsed = Math.round((annuality + Number.EPSILON) * 100) / 100;
+
+    resultadoAmrDebt.innerText = "Debe pagar " + annualityParsed + "$ anualmente para amortizar su deuda"
+}

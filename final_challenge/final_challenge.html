@@ -9,17 +9,18 @@
 </head>
 <body>
     <h1>Welcome!</h1>
-    
-    <label for="input-salary">Insert your salary</label>
-    <input type="number" id="inputSalary">
-    <br>
-    <label for="inputMultiplier">Insert your raise multiplier</label>
-    <input type="number" id="inputMultiplier">
-    
-    <button type="button" onclick="calculateRaise()">Show raise</button>
-    <p id="result-simple"></p>
-    <p id="result-percent"></p>
-    
+    <form action="#">
+        <h2>Calculadora de Aumento salarial</h2>
+        <label for="input-salary">Insert your salary</label>
+        <input type="number" id="inputSalary">
+        <br>
+        <label for="inputMultiplier">Insert your raise multiplier</label>
+        <input type="number" id="inputMultiplier">
+        
+        <button type="button" onclick="calculateRaise()">Show raise</button>
+        <p id="result-simple"></p>
+        <p id="result-percent"></p>
+        </form>
     <!-- this line gaps will be deleted when styling with css -->
     <br>
     <br>
@@ -46,18 +47,48 @@
         <p id="resultnpv"></p>
     </form>
 
-    <!-- <form action="#">
+    <form action="#">
         <h2>Internal Rate of Return calculator</h2>
-        <label for="inputInvestment">Insert your initial investment</label>
-        <input type="number" id="inputInvestment">
+        <label for="inputInvestment">Insert your initial financiation</label>
+        <input type="number" id="inputFinanced">
 
-        <label for="inputPeriod">Insert how many periods</label>
-        <input type="number" id="inputPeriod">
+        <label for="inputPeriod">Insert how many cashflows</label>
+        <input type="number" id="inputCashFlows">
 
-        <button type="button" onclick="irr()">Calculate IRR</button>
+        <button type="button" onclick="IRRCalc()">Calculate IRR</button>
         <p id="resultirr"></p>
 
-    </form> -->
+    </form>
+
+    <form action="#">
+        <h2>Calculadora de Interés Compuesto</h2>
+        <label for="inputInitialCapital">Inserte capital inicial</label>
+        <input type="number" id="inputInitialCapital">
+
+        <label for="inputInitalRate">Inserte tasa de interés</label>
+        <input type="number" id="inputInteresRate">
+
+        <label for="inputTime">Inserte años</label>
+        <input type="number" id="inputTime">
+
+        <button type="button" onclick="InRaCalc()">Calcular Interés compuesto</button>
+        <p id="resultInRa"></p>
+    </form>
+
+    <form action="#">
+        <h2>Calculadora de Amortización de deudas por anualidades</h2>
+        <label for="inputLoanCapital">Capital prestado</label>
+        <input type="number" id="inputLoanCapital">
+
+        <label for="inputLoanRate">Tasa de interés</label>
+        <input type="number" id="inputLoanRate">
+
+        <label for="inputYearsLoan">Tiempo de la amortización</label>
+        <input type="number" id="inputYearsLoan">
+
+        <button type="button" onclick="AmorDebt()">Calcular amortización</button>
+        <p id="resultAmorDebt"></p>
+    </form>
     <script src="./raise.js"></script>
     <script src="./feasibility.js"></script>
 </body>

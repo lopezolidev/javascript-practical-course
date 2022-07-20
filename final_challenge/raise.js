@@ -8,7 +8,6 @@ function calculateRaise() {
     const salary = document.getElementById("inputSalary");
     const multiplier = document.getElementById("inputMultiplier");
     const numericalSalary = parseInt(salary.value);
-
     const raiseSalary = salary.value*multiplier.value;
     const raiseTotal = raiseSalary + numericalSalary;
     const resultSimple = document.getElementById("result-simple");

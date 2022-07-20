@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./figures.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,800;1,300;1,500;1,700&display=swap" rel="stylesheet">  
+    <title>Geometrical Figures | Javascript Practical Course</title>
+</head>
+<body>
+    <header class="header">    
+        <h1>Geometry Calculator</h1>
+    </header>
+    <main class="wrapper">
+
+    <section class="geometry-section">
+        <section class="square-section section">
+            <h2>Calculate area and perimeter of a Square</h2>
+            <img src="./../images/icons8-square-96.png" alt="square" class="square-img img">
+            <form>
+                <div class="input">
+                <label for="inputSquare">
+                    Insert Square side
+                </label>
+                <input id="inputSquare" type="number" />
+                </div>
+                <div class="buttons">
+                    <button type="button" onclick="calculateSquarePerimeter()">
+                        Square perimeter
+                    </button>
+                    <button type="button" onclick="calculateSquareArea()">
+                        Square area
+                    </button>
+                </div>
+            </form>
+        </section>
+        <section class="triangle-section  section">
+            <h2>Calculate area and perimeter of a Triangle</h2>
+            <img src="./../images/icons8-triangle-96.png" alt="triangle" class="triangle-img img">
+            <form>
+                <div class="input input-triangle">
+                    <label for="inputTriangle">
+                        Insert Triangle sides
+                    </label>
+                    <div class="triangle-collection">
+                        <input id="inputTriangle" type="number" placeholder="Side 1" />
+                        <input id="inputTriangle2" type="number" placeholder="Side 2" />
+                        <input id="inputTriangle3" type="number" placeholder="Base" />
+                        <input id="inputTriangle4" type="number" placeholder="Height" />
+                    </div>
+                </div>
+                <div class="buttons triangle-buttons">
+                    <button type="button" onclick="calculateTrianglePerimeter()">
+                        Triangle perimeter
+                    </button>
+                    
+                    <button type="button" onclick="calculateTriangleArea()">
+                        Triangle area
+                    </button>
+                </div>
+            </form>
+        </section>
+        <section class="circle-section  section">
+            <h2>Calculate area and perimeter of a Circle</h2>
+            <img src="./../images/icons8-circle-100.png" alt="circle" class="circle-img img">
+            <form>
+                <div class="input input-circle">
+                    <label for="inputCircle">
+                        Insert Circle radius
+                    </label>
+                    <input id="inputCircle" type="number" />
+                </div>
+                <div class="buttons circle-button">     
+                    <button type="button" onclick="calculateCirclePerimeter()">
+                        Circle perimeter
+                    </button>
+                    <button type="button" onclick="calculateCircleArea()">
+                        Circle area
+                    </button>
+                </div>
+            </form>
+        </section>
+        <section class="discounter-section section">
+            <h2>Discount calculator</h2>
+            <form>
+                <div class="input input-discounter">
+                    <label for="price">
+                        Insert product price
+                    </label>
+                    <input id="price" type="number" />
+                
+
+                    <label for="discount">
+                        Insert product discount
+                    </label>
+                    <input id="discount" type="number" />
+                </div>
+                <div class="coupons">
+                    <label for="coupons">Your coupon:</label>
+                    <select name="coupons" id="coupons">
+                        <option value="0"> I don't have a coupon</option>
+                        <option value="15">-15%</option>
+                        <option value="20">-20%</option>
+                        <option value="25">-25%</option>
+                    </select>
+                </div>
+                <div class="button">
+                    <button type="button" onclick="calculateCoupon()">
+                    Apply discount
+                    </button>
+                </div>
+                <p id="result"></p>
+            </form>
+        </section>
+    </section>
+
+    <section class="financial-section">
+        <form action="#">
+            <h2>Calculadora de Aumento salarial</h2>
+            <label for="input-salary">Insert your salary</label>
+            <input type="number" id="inputSalary">
+            <br>
+            <label for="inputMultiplier">Insert your raise multiplier</label>
+            <input type="number" id="inputMultiplier">
+            
+            <button type="button" onclick="calculateRaise()">Show raise</button>
+            <p id="result-simple"></p>
+            <p id="result-percent"></p>
+            </form>
+        <!-- this line gaps will be deleted when styling with css -->
+        <br>
+        <br>
+        <br>
+
+        <form action="#">
+            <h2>Net Present Value calculator</h2>
+            <label for="inputInvestment">Insert your initial investment</label>
+            <input type="number" id="inputInvestment">
+            
+            <!-- this line gap also has to be deleted -->
+            <br>
+            <label for="inputPeriod">Insert how many periods</label>
+            <input type="number" id="inputPeriod">
+
+            <!-- another line gap to be deleted -->
+            <br>
+            <label for="inputRate">Insert Interest Rate</label>
+            <input type="number" id="inputRate">
+
+            <!-- line gap -->
+            <br>
+            <button type="button" onclick="netPresentValue()">Calculate NPV</button>
+            <p id="resultnpv"></p>
+        </form>
+
+        <form action="#">
+            <h2>Internal Rate of Return calculator</h2>
+            <label for="inputInvestment">Insert your initial financiation</label>
+            <input type="number" id="inputFinanced">
+
+            <label for="inputPeriod">Insert how many cashflows</label>
+            <input type="number" id="inputCashFlows">
+
+            <button type="button" onclick="IRRCalc()">Calculate IRR</button>
+            <p id="resultirr"></p>
+
+        </form>
+
+        <form action="#">
+            <h2>Calculadora de Interés Compuesto</h2>
+            <label for="inputInitialCapital">Inserte capital inicial</label>
+            <input type="number" id="inputInitialCapital">
+
+            <label for="inputInitalRate">Inserte tasa de interés</label>
+            <input type="number" id="inputInteresRate">
+
+            <label for="inputTime">Inserte años</label>
+            <input type="number" id="inputTime">
+
+            <button type="button" onclick="InRaCalc()">Calcular Interés compuesto</button>
+            <p id="resultInRa"></p>
+        </form>
+
+        <form action="#">
+            <h2>Calculadora de Amortización de deudas por anualidades</h2>
+            <label for="inputLoanCapital">Capital prestado</label>
+            <input type="number" id="inputLoanCapital">
+
+            <label for="inputLoanRate">Tasa de interés</label>
+            <input type="number" id="inputLoanRate">
+
+            <label for="inputYearsLoan">Tiempo de la amortización</label>
+            <input type="number" id="inputYearsLoan">
+
+            <button type="button" onclick="AmorDebt()">Calcular amortización</button>
+            <p id="resultAmorDebt"></p>
+        </form>
+    </section>
+    
+</main>
+    <script src="./figures.js"></script>
+    <script src="./../percentages/porcentajes.js"></script>
+</body>
+</html>
