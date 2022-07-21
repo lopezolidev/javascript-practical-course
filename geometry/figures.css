@@ -8,171 +8,171 @@ html{
     font-size: 62.5%;
 }
 :root {
-    --Main-color:  #7BB6E8; 
-    --Square-color:  #33ff57;
-    --Triangle-color: #4d23e7;
-    --Circle-color:  #e74d23;
-    --Square-opposite-color: #4d23e7 ;
+    --Main-color:  #5473EB; 
+    --Border-color: #000080;
 }
-
 /* Setting the general display - Mobile first approach */
 
+body {
+    background: #3a7bd5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #3a6073, #3a7bd5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #3a6073, #3a7bd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 .header {
+    width: 100vw;
     height: 8vh;
-    background-color: var(--Main-color);
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 8rem;
-}
-.header h1 {
-    font-size: large;
     color: white;
-
 }
+
+/* styles of main container */
+
 .wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5rem;
+    gap: 4rem;
 }
-.section {
-    height: 60vh;
+
+.main-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.6rem;
+    padding: 0.8rem 1rem;
+    border-radius: 0.4rem;
+    border:0.2rem solid var(--Border-color);
+}
+
+/* geometry section container */
+
+.geometry-section {
     width: 90vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    padding: 2rem;
+    gap: 2rem;
 }
-
-.section h2 {
-    padding-top: 4rem;
-    font-weight: 800;
-    font-size: x-large;
-    color: white;
-    font-style: normal;
-}
-.square-section .square-img {
-    width: auto;
-}
-.section form {
-    padding-bottom: 4rem;
+.section {
+    width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.6rem;
+    border: 0.2rem solid white;
+    border-radius: 0.4rem;
+    color: white;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    gap: 4rem;
+}
+
+.input {
+    width: 100%;
+    display: flex;
     justify-content: space-around;
     gap: 2rem;
 }
-.section .input {
-    display: flex;
+.input label {
+    font-size: 1.2rem;
 }
 
-.square-section .input label {
-    width: 25%;
-    color: white;
-    font-size: 1.4rem;
-
-}
-.square-section .input input {
-    width: 75%;
+.input-number {
     border: none;
-    background-color: transparent;
-    border-bottom: 1px solid white;
     outline: none;
+    background-color: transparent;
+    border-bottom: 0.1rem solid white;
     color: white;
-    font-size: medium;
+    text-align: center;
 }
-.section .buttons {
-    margin-top: 4rem;
+/* this property allows us to delete the arrows in an input type=number from our HTML, but this form is available only on firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.form .buttons {
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.square-section .buttons button {
-    background-color:  var(--Square-opposite-color);
-}
 
-.section .buttons button {
-     border: none;
-     width: 12rem;
-     height: 6rem;
-     border-radius: 2.8rem;
-     cursor: pointer;
-     /* background-color:  var(--Square-opposite-color) ; */
-     color: white;
-     font-weight: 700;
-}
-
-.square-section {
-    background-color: var(--Square-color);
-    border-radius: 5%;
-}
-
-/* Styles for triangle and circle */
-
-.triangle-section {
-    background-color: var(--Triangle-color);
-}
-
-.triangle-section .triangle-img {
-    width: auto;
-}
-.triangle-section .input-triangle {
-    display: flex;
-    flex-wrap: wrap;
-}
-.triangle-section .input-triangle label {
-    width: 100%;
-    text-align: center;
+.form .buttons button {
+    border: 0.2rem solid var(--Border-color);
+    border-radius: 0.4rem;
+    background-color: transparent;
     color: white;
-    font-size: 1.4rem;
-    margin-bottom: 1.6rem;
+    padding: 1.4rem;
 }
-.triangle-collection {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0.2rem;
-}
-.triangle-collection input {
+
+.input-triangle .triangle-collection {
     width: 50%;
-    padding: 0.8rem;
-    color: white;
-    outline: none;
-    background-color: transparent;
-    border: none;
-    border-bottom: solid 1px white;
-}
-
-.triangle-section .triangle-buttons button {
-    background-color: var(--Circle-color);
-}
-
-
-.circle-section {
-    background-color: var(--Circle-color);
-}
-
-.circle-section .circle-img {
-    width: auto;
-}
-
-.circle-section .input-circle {
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
-.circle-section .input-circle label {
+.triangle-collection .input-triangle-number {
+    width: 40%;
+}
+
+.form .result {
+    font-size: 1.6rem;
+    color: white;
+    text-align: center;
+}
+
+/* discount section styles */
+
+.discounter-section {
+    width: 90%;
+}
+
+.input-discounter .input-number {
     width: 25%;
-    color: white;
+}
+
+.discount-form .coupons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.coupons label {
+    font-size: 1.2rem;
+}
+
+.coupons select {
     font-size: 1.4rem;
-}
-.circle-section .input-circle input {
-    width: 75%;
-    border: none;
+    text-align: center;
     background-color: transparent;
-    border-bottom: 1px solid white;
-    outline: none;
+    border: 0.2rem solid var(--Border-color);
+    border-radius: 0.4rem;
+    padding: 0.6rem;
     color: white;
-    font-size: medium;
 }
-.circle-section .circle-button button {
-    background-color: var(--Square-color);
+
+.discount-form .button button {
+    border: 0.2rem solid var(--Border-color);
+    border-radius: 0.4rem;
+    background-color: transparent;
+    color: white;
+    padding: 1.4rem;
 }
+
+/* financial section styles */

@@ -86,12 +86,14 @@ function calculateSquarePerimeter() {
     const perimeter =squarePerimeter(side.value);
     // const perimeter = squarePerimeter(value);
     // alert(perimeter);
-    alert(perimeter);
+    const resultSquarePerimeter = document.getElementById("resultSquare");
+    resultSquarePerimeter.innerText = "Your square perimeter is " + perimeter;
 }
 function calculateSquareArea() {
     const side = document.getElementById("inputSquare");
     const area =squareArea(side.value);
-    alert(area);
+    const resultSquarePerimeter = document.getElementById("resultSquare");
+    resultSquarePerimeter.innerText = "Your square area is " + area;
 }
 
 // Triangle
@@ -102,19 +104,31 @@ function calculateTrianglePerimeter() {
     const height = document.getElementById("inputTriangle4");
     
     const perimeter = trianglePerimeter(Number(side1.value), Number(side2.value), Number(base.value));
-    alert (perimeter);
+    const resultTrianglePerimeter = document.getElementById("resultTriangle");
+    resultTrianglePerimeter.innerText = "Your triangle Perimeter is " + perimeter;
+}
+
+function calculateTriangleArea () {
+    const base = document.getElementById("inputTriangle3");
+    const height = document.getElementById("inputTriangle4");
+
     const area = triangleArea(Number(base.value), Number(height.value));
-    alert (area);
+    const resultTriangleArea = document.getElementById("resultTriangle");
+    resultTriangleArea.innerText = "Your triangle Area is " + area;
 }
 
 // Circle 
 function calculateCirclePerimeter() {
     const radius = document.getElementById("inputCircle");
     const perimeter = circlePerimeter(Number(radius.value));
-    alert(perimeter);
+    const perimeterRounded = Math.round((perimeter + Number.EPSILON) * 100) / 100;
+    const resultCirclePerimeter = document.getElementById("resultCircle");
+    resultCirclePerimeter.innerText = "Your circle Perimeter is " + perimeterRounded;
 }
 function calculateCircleArea() {
     const radius = document.getElementById("inputCircle");
     const area = circleArea(Number(radius.value));
-    alert(area);
+    const areaRounded = Math.round((area + Number.EPSILON) * 100) / 100;
+    const resultCircleArea = document.getElementById("resultCircle");
+    resultCircleArea.innerText = "Your circle Area is " + areaRounded;
 }
