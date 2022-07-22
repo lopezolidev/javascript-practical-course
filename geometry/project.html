@@ -126,83 +126,98 @@
     </section>
 
     <section id="financial" class="financial-section section">
-        <form class="financial-1-form form" action="#">
-            <h2>Calculadora de Aumento salarial</h2>
-            <label for="input-salary">Insert your salary</label>
-            <input class="input-number input-salary-number" type="number" id="inputSalary">
-            <br>
-            <label for="inputMultiplier">Insert your raise multiplier</label>
-            <input class="input-number input-multiplier-number" type="number" id="inputMultiplier">
-            
-            <button type="button" onclick="calculateRaise()">Show raise</button>
+        <form class="financial-1-form form financial" action="#">
+            <h2>Salary Raise calculator</h2>
+            <div class="input-salary-raise input-financial">
+                <div class="input-salary__container input-container--financial">
+                    <label for="input-salary">Insert your salary</label>
+                    <input class="input-number input-salary-number" type="number" id="inputSalary">
+                </div>
+                <div class="input-salary__container input-container--financial">
+                    <label for="inputMultiplier">Raise multiplier</label>
+                    <input class="input-number input-multiplier-number" type="number" id="inputMultiplier">
+                </div>
+            </div>
+
+            <button class="" type="button" onclick="calculateRaise()">Show raise</button>
             <p class="result resultRaise" id="result-simple"></p>
             <p class="result resultRaise" id="result-percent"></p>
         </form>
-        <!-- this line gaps will be deleted when styling with css -->
-        <br>
-        <br>
-        <br>
 
-        <form class="financial-2-form form" action="#">
+        <form class="financial-2-form form  financial" action="#">
             <h2>Net Present Value calculator</h2>
-            <label for="inputInvestment">Insert your initial investment</label>
-            <input class="input-number input-investment-number" type="number" id="inputInvestment">
-            
-            <!-- this line gap also has to be deleted -->
-            <br>
-            <label for="inputPeriod">Insert how many periods</label>
-            <input class="input-number input-period-number" type="number" id="inputPeriod">
-
-            <!-- another line gap to be deleted -->
-            <br>
-            <label for="inputRate">Insert Interest Rate</label>
-            <input class="input-number input-IRR-number" type="number" id="inputRate">
-
-            <!-- line gap -->
-            <br>
+            <div class="input-npv input-financial">
+                <div class="input-npv__container input-container--financial">
+                    <label for="inputInvestment">Initial investment</label>
+                    <input class="input-number input-investment-number" type="number" id="inputInvestment">
+                </div>
+                <div class="input-npv__container input-container--financial">
+                    <label for="inputPeriod">Periods</label>
+                    <input class="input-number input-period-number" type="number" id="inputPeriod">
+                </div>
+                <div class="input-npv__container input-container--financial">
+                    <label for="inputRate">Interest Rate</label>
+                    <input class="input-number input-IRR-number" type="number" id="inputRate">
+                </div>
+            </div>
             <button type="button" onclick="netPresentValue()">Calculate NPV</button>
             <p class="result resultNPV" id="resultnpv"></p>
         </form>
 
-        <form class="financial-3-form form" action="#">
+        <form class="financial-3-form form  financial" action="#">
             <h2>Internal Rate of Return calculator</h2>
-            <label for="inputInvestment">Insert your initial financiation</label>
-            <input class="input-number input-financiation-number" type="number" id="inputFinanced">
-
-            <label for="inputPeriod">Insert how many cashflows</label>
-            <input class="input-number input-cashflow-number" type="number" id="inputCashFlows">
-
+            <div class="input-IRR input-financial">
+                <div class="input-IRR__container input-container--financial">
+                    <label for="inputInvestment">Insert your initial financiation</label>
+                    <input class="input-number input-financiation-number" type="number" id="inputFinanced">
+                </div>
+                <div class="input-IRR__container input-container--financial">
+                    <label for="inputPeriod">Insert how many cashflows</label>
+                    <input class="input-number input-cashflow-number" type="number" id="inputCashFlows">
+                </div>
+            </div>
             <button type="button" onclick="IRRCalc()">Calculate IRR</button>
             <p class="result resultIRR" id="resultirr"></p>
-
         </form>
 
-        <form class="financial-4-form form" action="#">
-            <h2>Calculadora de Interés Compuesto</h2>
-            <label for="inputInitialCapital">Inserte capital inicial</label>
-            <input class="input-number input-capital-number" type="number" id="inputInitialCapital">
-
-            <label for="inputInitalRate">Inserte tasa de interés</label>
-            <input class="input-number input-IRR-number" type="number" id="inputInteresRate">
-
-            <label for="inputTime">Inserte años</label>
-            <input class="input-number input-periods-number" type="number" id="inputTime">
-
-            <button type="button" onclick="InRaCalc()">Calcular Interés compuesto</button>
+        <form class="financial-4-form form  financial" action="#">
+            <h2>Compound Interest calculator</h2>
+            <div class="input-Interest-calc input-financial">
+                <div class="input-Interest-calc__container input-container--financial">
+                    <label for="inputInitialCapital">Initial Capital</label>
+                    <input class="input-number input-capital-number" type="number" id="inputInitialCapital">
+                </div>
+                <div class="input-Interest-calc__container input-container--financial">
+                    <label for="inputInitalRate">Interest Rate</label>
+                    <input class="input-number input-IRR-number" type="number" id="inputInteresRate">
+                </div>
+                <div class="input-Interest-calc__container input-container--financial">
+                    <label for="inputTime">Periods</label>
+                    <input class="input-number input-periods-number" type="number" id="inputTime">
+                </div>
+            </div>
+            <button type="button" onclick="InRaCalc()">Calculate</button>
             <p class="result resultInRa" id="resultInRa"></p>
         </form>
 
-        <form class="financial-5-form form" action="#">
+        <form class="financial-5-form form  financial" action="#">
             <h2>Calculadora de Amortización de deudas por anualidades</h2>
-            <label for="inputLoanCapital">Capital prestado</label>
-            <input class="input-number input-loan-number" type="number" id="inputLoanCapital">
+            <div class="input-Debt-Amort input-financial">
+                <div class="input-Debt-Amort__container input-container--financial">
+                    <label for="inputLoanCapital">Capital prestado</label>
+                    <input class="input-number input-loan-number" type="number" id="inputLoanCapital">
+                </div>
 
-            <label for="inputLoanRate">Tasa de interés</label>
-            <input class="input-number input-IRR-number" type="number" id="inputLoanRate">
+                <div class="input-Debt-Amort__container input-container--financial">
+                    <label for="inputLoanRate">Tasa de interés</label>
+                    <input class="input-number input-IRR-number" type="number" id="inputLoanRate">
+                </div>
 
-            <label for="inputYearsLoan">Tiempo de la amortización</label>
-            <input class="input-number input-periods-number" type="number" id="inputYearsLoan">
-
+                <div class="input-Debt-Amort__container input-container--financial">
+                    <label for="inputYearsLoan">Tiempo de la amortización</label>
+                    <input class="input-number input-periods-number" type="number" id="inputYearsLoan">
+                </div>
+            </div>
             <button type="button" onclick="AmorDebt()">Calcular amortización</button>
             <p class="result resultAmorDebt" id="resultAmorDebt"></p>
         </form>

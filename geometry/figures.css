@@ -176,3 +176,79 @@ input[type=number] {
 }
 
 /* financial section styles */
+
+.financial-section {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.input-salary-raise {
+    display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+    align-items: center;
+}
+
+.input-salary__container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.input-container--financial label {
+    text-align: center;
+}
+
+.input-salary__container input {
+    width: 50%;
+}
+
+.financial button {
+    border: 0.2rem solid var(--Border-color);
+    border-radius: 0.4rem;
+    background-color: transparent;
+    color: white;
+    padding: 1.4rem;
+}
+
+.input-financial {
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.input-npv__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30%;
+    height: 100%;
+}
+
+.input-IRR__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+    height: 100%;
+}
+
+
+.input-Interest-calc__container {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input-Debt-Amort__container {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
