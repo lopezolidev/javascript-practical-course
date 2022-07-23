@@ -94,7 +94,7 @@ body {
     gap: 2rem;
 }
 .input label {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
 }
 
 .input-number {
@@ -215,6 +215,7 @@ input[type=number] {
 
 .input-container--financial label {
     text-align: center;
+    font-size: 1.8rem;
 }
 
 .input-salary__container input {
