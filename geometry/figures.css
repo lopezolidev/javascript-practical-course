@@ -33,7 +33,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4rem;
+    gap: 6rem;
 }
 
 .main-menu {
@@ -71,6 +71,10 @@ body {
     border: 0.2rem solid white;
     border-radius: 0.4rem;
     color: white;
+}
+
+.section h2 {
+    text-align: center;
 }
 
 .form {
@@ -153,6 +157,13 @@ input[type=number] {
     gap: 1rem;
 }
 
+.discount-form .selector-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
 .coupons label {
     font-size: 1.2rem;
 }
@@ -182,6 +193,10 @@ input[type=number] {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+}
+
+.financial h2 {
+    text-align: center;
 }
 
 .input-salary-raise {
@@ -252,3 +267,21 @@ input[type=number] {
     flex-direction: column;
     justify-content: space-between;
 }
+
+footer {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+footer a {
+    background-color: var(--Border-color);
+    border-radius: 0.4rem;
+    padding: 1.2rem;
+    text-decoration: none;
+    color: white
+}
+
+

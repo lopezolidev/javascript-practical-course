@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="./figures.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,800;1,300;1,500;1,700&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,800;1,300;1,500;1,700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="figures-tablet.css" media="(min-width: 760px)"> 
+    <link rel="stylesheet" href="./figures-desktop.css" media="(min-width: 1200px)">
     <title>Geometrical Figures | Javascript Practical Course</title>
 </head>
 <body>
@@ -16,7 +18,7 @@
     </header>
     <main class="wrapper">
     <section class="main-menu">
-        <a class="geometry-a a" href="#geometry">Geometry section</a>
+        <a class="geometry-a a" href="#geometry">Geometry</a>
         <a class="discount-a a" href="#discounter">Discount calculator</a>
         <a class="financial-a a" href="#financial">Financial</a>
     </section>
@@ -107,19 +109,21 @@
                 </label>
                 <input class="input-number input-discount-number" id="discount" type="number" />
             </div>
-            <div class="coupons">
-                <label for="coupons">Your coupon:</label>
-                <select name="coupons" id="coupons">
-                    <option value="0"> I don't have a coupon</option>
-                    <option value="15">-15%</option>
-                    <option value="20">-20%</option>
-                    <option value="25">-25%</option>
-                </select>
-            </div>
-            <div class="button">
-                <button type="button" onclick="calculateCoupon()">
-                Apply discount
-                </button>
+            <div class="selector-buttons">
+                <div class="coupons">
+                    <label for="coupons">Your coupon:</label>
+                    <select name="coupons" id="coupons">
+                        <option value="0"> I don't have a coupon</option>
+                        <option value="15">-15%</option>
+                        <option value="20">-20%</option>
+                        <option value="25">-25%</option>
+                    </select>
+                </div>
+                <div class="button">
+                    <button type="button" onclick="calculateCoupon()">
+                    Apply discount
+                    </button>
+                </div>
             </div>
             <p class="result resultDiscount" id="result"></p>
         </form>
@@ -201,27 +205,30 @@
         </form>
 
         <form class="financial-5-form form  financial" action="#">
-            <h2>Calculadora de Amortización de deudas por anualidades</h2>
+            <h2>Debt Amortization by annualities calculator</h2>
             <div class="input-Debt-Amort input-financial">
                 <div class="input-Debt-Amort__container input-container--financial">
-                    <label for="inputLoanCapital">Capital prestado</label>
+                    <label for="inputLoanCapital">Loan capital</label>
                     <input class="input-number input-loan-number" type="number" id="inputLoanCapital">
                 </div>
 
                 <div class="input-Debt-Amort__container input-container--financial">
-                    <label for="inputLoanRate">Tasa de interés</label>
+                    <label for="inputLoanRate">Interest rate</label>
                     <input class="input-number input-IRR-number" type="number" id="inputLoanRate">
                 </div>
 
                 <div class="input-Debt-Amort__container input-container--financial">
-                    <label for="inputYearsLoan">Tiempo de la amortización</label>
+                    <label for="inputYearsLoan">Time for amortization</label>
                     <input class="input-number input-periods-number" type="number" id="inputYearsLoan">
                 </div>
             </div>
-            <button type="button" onclick="AmorDebt()">Calcular amortización</button>
+            <button type="button" onclick="AmorDebt()">Calculate</button>
             <p class="result resultAmorDebt" id="resultAmorDebt"></p>
         </form>
     </section>
+    <footer>
+        <h3>Coded by <a href="https://github.com/rockwatch">@rockwatch</a></h3>
+    </footer>
     
 </main>
     <script src="./figures.js"></script>
