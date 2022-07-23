@@ -86,7 +86,7 @@ function InRaCalc() {
     //here I add the function Math.round and Number.EPSILON operator to round the decimal digits of the capitalTotal number to 2 digits
     const capitalFinal = Math.round((capitalTotal + Number.EPSILON) * 100) / 100;
 
-    capitalResultado.innerText = "Tendrás " + capitalFinal + "$ de capital a los " + añosInteresNumerico + " años, con una tasa de interés de " + tasaInteresNumerica + "% y " + capitalInicialNumerico + " de capital inicial."   
+    capitalResultado.innerText = "You'll earn " + capitalFinal + "$ in " + añosInteresNumerico + " years, with an interest rate of " + tasaInteresNumerica + "% and " + capitalInicialNumerico + " $ of initial capital."   
 }
 
 // Debt amortization by annualities
@@ -110,5 +110,5 @@ function AmorDebt() {
     
     const annualityParsed = Math.round((annuality + Number.EPSILON) * 100) / 100;
 
-    resultadoAmrDebt.innerText = "Debe pagar " + annualityParsed + "$ anualmente para amortizar su deuda"
+    resultadoAmrDebt.innerText = "Your periodic pay must be " + annualityParsed + "$ to amortize your debt"
 }
