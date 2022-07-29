@@ -1,5 +1,7 @@
 # javascript-practical-course
 
+Live site [here](https://rockwatch.github.io/javascript-practical-course/geometry/project.html)
+
 A repository for the Platzi's javascript practical course - Here the following concepts are implemented:
 
 - *Mobile first - reponsive layout*
