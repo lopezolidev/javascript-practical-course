@@ -17,9 +17,11 @@
     align-items: baseline;
     flex-wrap: wrap;
     width: 90%;
+    gap: 6rem;
 }
 .geometry-section .square-section, .geometry-section .triangle-section {
     width: 45%;
+    height: 40rem;
 }
 
 .discount-form .selector-buttons {
